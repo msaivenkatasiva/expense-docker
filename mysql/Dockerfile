@@ -4,9 +4,9 @@ FROM mysql:8.0
 RUN adduser -r expense
 
 # 2. Environment variables for MySQL
-ENV MYSQL_ROOT_PASSWORD=ExpenseApp1 \
+ENV MYSQL_ROOT_PASSWORD=ExpenseApp@1 \
     MYSQL_USER=expense \
-    MYSQL_PASSWORD=ExpenseApp1 \
+    MYSQL_PASSWORD=ExpenseApp@1 \
     MYSQL_DATABASE=transactions
 
 # 3. Give ownership of MySQL directories
