@@ -9,7 +9,7 @@ volumes:
       #docker volume create mysql
 services: 
   mysql:
-    image: msaivenkatasiva/expense-mysql:v1.0
+    image: msaivenkatasiva/expense-mysql:v1.1
     container_name: mysql #--name mysql
     environment:
       - MYSQL_ROOT_PASSWORD=ExpenseApp@1
@@ -21,13 +21,13 @@ services:
       target: /var/lib/mysql
       type: volume #-- v volume-name:/path/in/container 
   backend:
-    image: msaivenkatasiva/expense-backend:v1.0
+    image: msaivenkatasiva/expense-backend:v1.1
     container_name: backend
     command: sh -c "sleep 20 && node /opt/server/index.js"
     depends_on:
     - mysql
   frontend:
-    image: msaivenkatasiva/expense-frontend:v1.0
+    image: msaivenkatasiva/expense-frontend:v1.1
     container_name: frontend
     depends_on:
     - backend
