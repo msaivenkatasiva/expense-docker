@@ -27,7 +27,7 @@ services:
     depends_on:
     - mysql
   frontend:
-    image: msaivenkatasiva/expense-frontend:v1.1
+    image: msaivenkatasiva/expense-frontend:v1.0
     container_name: frontend
     depends_on:
     - backend
